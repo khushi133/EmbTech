@@ -1,0 +1,16 @@
+Project Overview
+
+This project demonstrates the creation of a 2x2 keypad using a push button matrix interfaced with an ATmega16 microcontroller in Proteus simulation. The objective is to control LEDs based on the key presses detected by the keypad matrix, showcasing practical applications of microcontroller-based input handling.
+
+Components
+
+Microcontroller: ATmega16
+Push Buttons: 4 (configured in a 2x2 matrix)
+LEDs: 4
+Resistors: Pull-down
+Other: Ground, push down button
+Working Principle
+
+A 2x2 keypad matrix consists of four push buttons arranged in a grid. Each button connects a unique combination of row and column pins, allowing the microcontroller to detect specific key presses. The scanning method involves setting all row pins as outputs and all column pins as inputs with pull-down resistors enabled. The microcontroller drives one row high at a time and scans the columns to identify which button is pressed.
+
+When a button is pressed, the corresponding row pin reads low. To confirm the key press, a debounce delay filters out noise or bounce from the button. Once a key press is validated, the corresponding LED is illuminated based on the specific button pressed. This technique efficiently reads key presses while using a minimal number of I/O pins, making it a practical solution for various embedded applications.

@@ -1,0 +1,13 @@
+Project Overview
+
+This project demonstrates the interfacing of a stepper motor using an AVR ATmega32 microcontroller in Proteus simulation. The objective is to control the stepper motor through programmed sequences, showcasing practical applications of microcontroller-based motor control.
+
+Components
+
+Microcontroller: ATmega32
+Motor Driver: ULN2003A
+Stepper Motor
+Input Devices: 4 Push Buttons (Pull-Up Configuration)
+Working Principle
+
+Stepper motors convert electrical pulses into precise mechanical movements. The AVR microcontroller sends control signals to the stepper motor through the ULN2003A motor driver. The motor is driven in half-step and full-step modes, with the sequences controlled by the microcontroller. Each step is timed with delays to ensure accurate motor positioning and stability.

@@ -1,0 +1,37 @@
+#include <inttypes.h>
+#include <avr/io.h> 
+#include <avr/interrupt.h>
+ 
+#include <avr/sleep.h> 
+#include <util/delay.h>
+
+int main()
+{
+
+   DDRD = 0XFF; DDRC = 0X00; PORTC=3; DDRA = 0XFF;
+   while (1)
+   {
+
+      PORTD=2; if((PINC&0x01)==0X00)
+      { while((PINC&0x01)==0X00)
+	 { PORTA=2;
+	 }
+      } if((PINC&0x02)==0X00)
+      { while((PINC&0x02)==0X00)
+	 { PORTA=8;
+	 }
+      }
+ 
+      _delay_ms(50); PORTD=1; if((PINC&0x01)==0X00)
+   { while((PINC&0x01)==0X00)
+      { PORTA=4;
+      }
+   } if((PINC&0x02)==0X00)
+   { while((PINC&0x02)==0X00)
+      { PORTA=16;
+      }
+   }
+
+   _delay_ms(50); PORTA=0;
+   }
+}

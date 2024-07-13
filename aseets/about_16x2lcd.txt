@@ -1,0 +1,14 @@
+Project Overview
+
+This project demonstrates interfacing a 16x2 LCD display with an AVR ATmega32 microcontroller in Proteus simulation. The objective is to display alphanumeric characters and symbols on the LCD, showcasing practical applications of microcontroller-based display control.
+
+Components
+
+Microcontroller: ATmega32
+LCD Display: 16x2
+Potentiometer: For adjusting the contrast of the LCD
+Resistors: For current limiting
+Capacitors: For decoupling and stability
+Working Principle
+
+Interfacing a 16x2 LCD with an ATmega32 microcontroller involves connecting the LCD to the microcontroller's I/O pins to send commands and data. The LCD operates on the principle of liquid crystal polarization, where voltage applied to specific segments determines which segments become opaque to create characters. The microcontroller is programmed to control the LCD and display the desired text or information.

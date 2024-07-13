@@ -1,0 +1,54 @@
+#include <avr/io.h>
+#include <util/delay.h>
+
+void half_step(void) {
+    PORTA = 0b00001000; //DCBA
+    _delay_ms(1000);
+
+    PORTA = 0b00001100;
+    _delay_ms(1000);
+
+    PORTA = 0b00000100;
+    _delay_ms(1000);
+
+    PORTA = 0b00000110;
+    _delay_ms(1000);
+
+    PORTA = 0b00000010;
+    _delay_ms(1000);
+
+    PORTA = 0b00000011;
+    _delay_ms(1000);
+
+    PORTA = 0b00000001;
+    _delay_ms(1000);
+
+    PORTA = 0b00001001;
+    _delay_ms(1000);
+}
+
+void full_step(void) {
+    PORTA = 0b00001100;
+    _delay_ms(1000);
+
+    PORTA = 0b00000110;
+    _delay_ms(1000);
+
+    PORTA = 0b00000011;
+    _delay_ms(1000);
+
+    PORTA = 0b00001001;
+    _delay_ms(1000);
+}
+
+int main(void) {
+    DDRA = 0xFF; // Configure all pins of PORTA as output
+    PORTA = 0x00; // Initialize PORTA to 0
+
+    while (1) {
+        half_step();
+        // full_step();
+    }
+
+    return 0;
+}
